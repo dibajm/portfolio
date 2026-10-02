@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diba Jamali | Graduate Junior Software Engineer (Full-Stack: React, TypeScript, Node.js)</title>
+  <meta name="description" content="Diba Jamali is a graduate junior software engineer in Calgary, AB, finishing a BSc in Software Engineering (University of Calgary, Dec 2026). Full-stack: React, TypeScript, Node.js, REST APIs, SQL, AWS. Has shipped production apps for real clients, solo and as a team lead." />
+  <meta name="keywords" content="Graduate Software Engineer, Junior Software Engineer, Junior Developer, Full-Stack Developer, React, TypeScript, Node.js, Express, REST API, PostgreSQL, MySQL, AWS, CI/CD, Calgary" />
+  <meta property="og:title" content="Diba Jamali | Graduate Junior Software Engineer" />
+  <meta property="og:description" content="Full-stack engineer who ships production software for real clients. React · TypeScript · Node.js · SQL · AWS." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ff4f00'/><text x='50' y='70' font-size='56' font-family='Arial Black,Arial' font-weight='900' fill='%23111' text-anchor='middle'>DJ</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Diba Jamali",
+    "jobTitle": "Graduate Junior Software Engineer",
+    "email": "mailto:diba.jamali@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Calgary", "addressRegion": "AB", "addressCountry": "CA" },
+    "alumniOf": "University of Calgary",
+    "knowsAbout": ["React", "TypeScript", "Node.js", "Express", "REST APIs", "PostgreSQL", "MySQL", "AWS Lambda", "CI/CD", "Agile"]
+  }
+  </script>
+  <style>
+    :root {
+      --paper: #f2eee4;
+      --paper-2: #e9e3d6;
+      --ink: #111111;
+      --ink-2: #4a463f;
+      --rule: #111111;
+      --hair: #cfc7b6;
+      --signal: #ff4f00;
+      --signal-text: #c23c00;
+      --grid: rgba(17, 17, 17, 0.06);
+      --wide: "Archivo", "Arial Black", sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #121210;
+        --paper-2: #1b1b18;
+        --ink: #efe9dc;
+        --ink-2: #aba493;
+        --rule: #efe9dc;
+        --hair: #3a3830;
+        --signal: #ff5a14;
+        --signal-text: #ff7a3d;
+        --grid: rgba(239, 233, 220, 0.05);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--wide);
+      font-stretch: 100%;
+      font-size: 17px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--signal); color: #111; }
+    a { color: inherit; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    .mono { font-family: var(--mono); font-size: 13px; letter-spacing: 0.02em; text-transform: uppercase; }
+    .skip { position: absolute; left: -999px; }
+    .skip:focus { left: 16px; top: 16px; background: var(--signal); color: #111; padding: 8px 12px; z-index: 100; }
+    :focus-visible { outline: 3px solid var(--signal); outline-offset: 3px; }
+
+    /* ---------- Top bar ---------- */
+    .bar {
+      position: sticky; top: 0; z-index: 20;
+      background: var(--paper);
+      border-bottom: 2px solid var(--rule);
+    }
+    .bar .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; gap: 16px; }
+    section[id] { scroll-margin-top: 70px; }
+    .logo {
+      font-weight: 900; font-stretch: 125%; font-size: 20px; text-decoration: none; letter-spacing: -0.02em;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .logo i { width: 14px; height: 14px; background: var(--signal); display: inline-block; }
+    .bar nav { display: flex; gap: 26px; }
+    .bar nav a { text-decoration: none; color: var(--ink-2); }
+    .bar nav a:hover { color: var(--ink); }
+    .bar nav a b { color: var(--signal-text); font-weight: 500; }
+    .status {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1.5px solid var(--rule); padding: 5px 10px; white-space: nowrap;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #1fae4b; box-shadow: 0 0 0 0 rgba(31,174,75,.6); animation: ping 2s infinite; }
+    @keyframes ping { 70% { box-shadow: 0 0 0 8px rgba(31,174,75,0); } 100% { box-shadow: 0 0 0 0 rgba(31,174,75,0); } }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative; overflow: hidden;
+      background-image:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 32px 32px;
+      border-bottom: 2px solid var(--rule);
+    }
+    .sheet-head {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--hair);
+    }
+    .sheet-head div { padding: 12px 0; color: var(--ink-2); }
+    .sheet-head div span { color: var(--ink); }
+    .hero-body { padding: 56px 0 64px; position: relative; z-index: 2; }
+    .kicker { display: inline-block; background: var(--ink); color: var(--paper); padding: 6px 10px; margin-bottom: 26px; }
+    h1.name {
+      margin: 0;
+      font-weight: 900; font-stretch: 125%;
+      font-size: clamp(64px, 14.2vw, 200px);
+      line-height: 0.84; letter-spacing: -0.045em;
+      text-transform: uppercase;
+    }
+    h1.name .l2 { display: block; padding-left: 0.62em; position: relative; }
+    h1.name .l2::before {
+      content: ""; position: absolute; left: 0; top: 0.12em;
+      width: 0.42em; height: 0.66em; background: var(--signal);
+    }
+    .role-line {
+      margin: 34px 0 0; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: end;
+    }
+    .role-line h2 {
+      margin: 0; font-size: clamp(24px, 3.1vw, 38px); line-height: 1.08; font-weight: 800; font-stretch: 112%; letter-spacing: -0.02em;
+    }
+    .role-line h2 em { font-style: normal; color: var(--signal-text); }
+    .role-line p { margin: 0; color: var(--ink-2); max-width: 470px; }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .btn {
+      font-family: var(--mono); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em;
+      text-decoration: none; padding: 14px 20px; border: 2px solid var(--rule); background: var(--paper);
+      box-shadow: 4px 4px 0 var(--rule); transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--rule); }
+    .btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--rule); }
+    .btn.go { background: var(--signal); color: #111; }
+
+    /* CAD crosshair (pointer devices only) */
+    .xh { position: absolute; inset: 0; pointer-events: none; z-index: 1; opacity: 0; transition: opacity .2s; }
+    .hero:hover .xh { opacity: 1; }
+    .xh .h, .xh .v { position: absolute; background: var(--signal); opacity: .55; }
+    .xh .h { left: 0; right: 0; height: 1px; }
+    .xh .v { top: 0; bottom: 0; width: 1px; }
+    .xh .read { position: absolute; font-family: var(--mono); font-size: 11px; color: var(--signal-text); padding: 4px 6px; white-space: nowrap; }
+
+    /* ---------- Numbers strip ---------- */
+    .numbers { border-bottom: 2px solid var(--rule); }
+    .numbers .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .num { padding: 28px 20px 26px; border-left: 1px solid var(--hair); }
+    .num:first-child { border-left: none; padding-left: 0; }
+    .num strong { display: block; font-size: clamp(34px, 4.4vw, 56px); font-weight: 900; font-stretch: 125%; line-height: 1; letter-spacing: -0.03em; }
+    .num strong sup { font-size: 0.45em; color: var(--signal-text); vertical-align: top; position: relative; top: 0.25em; margin-left: 2px; }
+    .num span { display: block; margin-top: 10px; color: var(--ink-2); }
+
+    /* ---------- Section headers ---------- */
+    section { border-bottom: 2px solid var(--rule); }
+    .sec-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; padding: 64px 0 28px; }
+    .sec-head h2 { margin: 0; font-size: clamp(40px, 7vw, 92px); font-weight: 900; font-stretch: 125%; letter-spacing: -0.04em; line-height: 0.9; text-transform: uppercase; }
+    .sec-head .mono { color: var(--ink-2); text-align: right; }
+
+    /* ---------- Project datasheets ---------- */
+    .sheet {
+      display: grid; grid-template-columns: 110px 260px minmax(0, 1fr); gap: 0;
+      border-top: 2px solid var(--rule);
+    }
+    .sheet:last-child { margin-bottom: 72px; border-bottom: 2px solid var(--rule); }
+    .sheet > * { padding: 30px 24px 32px; }
+    .idx {
+      padding-left: 0; font-weight: 900; font-stretch: 125%; font-size: 54px; line-height: 0.9; letter-spacing: -0.04em;
+      color: transparent; -webkit-text-stroke: 1.5px var(--ink); transition: color .2s, -webkit-text-stroke-color .2s;
+    }
+    .sheet:hover .idx { color: var(--signal); -webkit-text-stroke-color: var(--signal); }
+    .meta { border-left: 1px solid var(--hair); border-right: 1px solid var(--hair); }
+    .meta dl { margin: 0; display: grid; gap: 14px; }
+    .meta dt { color: var(--ink-2); margin-bottom: 3px; }
+    .meta dd { margin: 0; font-family: var(--mono); font-size: 13.5px; line-height: 1.45; }
+    .tag {
+      display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 12px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.04em; padding: 4px 8px; border: 1.5px solid var(--rule);
+    }
+    .tag.live { background: #1fae4b; border-color: #1fae4b; color: #fff; }
+    .tag.priv { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+    .tag.acad { background: transparent; }
+    .body h3 { margin: 0 0 12px; font-size: clamp(24px, 2.6vw, 32px); font-weight: 800; font-stretch: 112%; letter-spacing: -0.02em; line-height: 1.1; }
+    .body > p { margin: 0 0 16px; color: var(--ink-2); max-width: 640px; }
+    .body ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 9px; max-width: 660px; }
+    .body li { position: relative; padding-left: 22px; }
+    .body li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 10px; height: 2px; background: var(--signal); }
+    .body li b { font-weight: 700; }
+    .callout {
+      margin-top: 20px; max-width: 660px; padding: 14px 16px; border: 1.5px dashed var(--ink);
+      font-size: 15px; display: flex; gap: 12px; align-items: flex-start;
+    }
+    .callout .mono { color: var(--signal-text); white-space: nowrap; padding-top: 2px; }
+    .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+    .links a {
+      font-family: var(--mono); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em;
+      text-decoration: none; padding: 9px 14px; border: 2px solid var(--rule); background: var(--paper);
+    }
+    .links a:hover { background: var(--ink); color: var(--paper); }
+    .links a.go { background: var(--signal); color: #111; border-color: var(--rule); }
+    .links a.go:hover { background: var(--ink); color: var(--paper); }
+
+    /* ---------- Experience ---------- */
+    .timeline { margin-bottom: 72px; }
+    .row { display: grid; grid-template-columns: 220px minmax(0, 1fr) 200px; gap: 24px; padding: 24px 0; border-top: 1px solid var(--hair); align-items: baseline; }
+    .row:first-child { border-top: 2px solid var(--rule); }
+    .row:last-child { border-bottom: 2px solid var(--rule); }
+    .row .when { color: var(--ink-2); }
+    .row h3 { margin: 0; font-size: 21px; font-weight: 800; font-stretch: 110%; letter-spacing: -0.01em; }
+    .row p { margin: 6px 0 0; color: var(--ink-2); max-width: 600px; }
+    .row .kw { color: var(--ink-2); text-align: right; }
+
+    /* ---------- Stack ---------- */
+    .stack { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid var(--rule); margin-bottom: 72px; }
+    .cell { padding: 24px 24px 28px 0; border-bottom: 1px solid var(--hair); }
+    .cell:not(:nth-child(3n+1)) { padding-left: 24px; border-left: 1px solid var(--hair); }
+    .cell h3 { margin: 0 0 12px; color: var(--signal-text); font-weight: 600; }
+    .cell p { margin: 0; font-size: 18px; line-height: 1.5; }
+    .cell p b { font-weight: 800; }
+
+    /* ---------- Contact ---------- */
+    .contact { background: var(--ink); color: var(--paper); border-bottom: none; }
+    .contact .wrap { padding-top: 80px; padding-bottom: 72px; }
+    .contact .mono { color: var(--signal); }
+    .big-mail {
+      display: inline-block; margin: 18px 0 30px; font-weight: 900; font-stretch: 125%; letter-spacing: -0.04em; line-height: 0.95;
+      font-size: clamp(30px, 6.4vw, 84px); text-decoration: none; overflow-wrap: anywhere;
+      background: linear-gradient(var(--signal), var(--signal)) no-repeat 0 100% / 0 0.12em; transition: background-size .35s ease;
+    }
+    .big-mail:hover { background-size: 100% 0.12em; }
+    .contact p { max-width: 560px; color: color-mix(in srgb, var(--paper) 75%, transparent); margin: 0 0 30px; }
+    .contact .btn { background: var(--ink); color: var(--paper); border-color: var(--paper); box-shadow: 4px 4px 0 var(--signal); }
+    .contact .btn:hover { box-shadow: 6px 6px 0 var(--signal); }
+    .contact .btn.go { background: var(--signal); color: #111; border-color: var(--signal); box-shadow: 4px 4px 0 var(--paper); }
+    footer { background: var(--ink); color: color-mix(in srgb, var(--paper) 60%, transparent); border-top: 1px solid color-mix(in srgb, var(--paper) 20%, transparent); }
+    footer .wrap { display: flex; justify-content: space-between; gap: 16px; padding-top: 20px; padding-bottom: 24px; flex-wrap: wrap; }
+
+    /* ---------- Load-in ---------- */
+    @media (prefers-reduced-motion: no-preference) {
+      .rise { opacity: 0; transform: translateY(18px); animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+      .d1 { animation-delay: .05s; } .d2 { animation-delay: .15s; } .d3 { animation-delay: .28s; } .d4 { animation-delay: .4s; }
+      @keyframes rise { to { opacity: 1; transform: none; } }
+    }
+    @media (prefers-reduced-motion: reduce) { .dot { animation: none; } html { scroll-behavior: auto; } }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 960px) {
+      .sheet { grid-template-columns: 70px minmax(0, 1fr); }
+      .idx { font-size: 40px; }
+      .meta { grid-column: 2; border-right: none; border-bottom: 1px solid var(--hair); }
+      .body { grid-column: 2; border-left: 1px solid var(--hair); }
+      .meta dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .row { grid-template-columns: 160px minmax(0, 1fr); }
+      .row .kw { display: none; }
+      .stack { grid-template-columns: repeat(2, 1fr); }
+      .cell:not(:nth-child(3n+1)) { padding-left: 0; border-left: none; }
+      .cell:nth-child(2n) { padding-left: 24px; border-left: 1px solid var(--hair); }
+    }
+    @media (max-width: 720px) {
+      body { font-size: 16px; }
+      .wrap { padding: 0 16px; }
+      .bar .wrap { height: auto; min-height: 58px; flex-wrap: wrap; padding-top: 8px; }
+      .bar nav {
+        display: flex; order: 3; flex: 0 0 100%; gap: clamp(8px, 2.5vw, 16px);
+        overflow-x: auto; padding-bottom: 8px; font-size: 11px; scrollbar-width: none;
+      }
+      .bar nav::-webkit-scrollbar { display: none; }
+      .bar nav a { flex: 0 0 auto; padding: 4px 0; }
+      section[id] { scroll-margin-top: 100px; }
+      .sheet-head { grid-template-columns: repeat(2, 1fr); }
+      .hero-body { padding: 36px 0 44px; }
+      .role-line { grid-template-columns: 1fr; gap: 16px; margin-top: 26px; }
+      .numbers .wrap { grid-template-columns: repeat(2, 1fr); }
+      .num { padding: 22px 0 20px 16px; border-bottom: 1px solid var(--hair); }
+      .num:nth-child(odd) { border-left: none; padding-left: 0; }
+      .sec-head { flex-direction: column; align-items: flex-start; padding-top: 48px; }
+      .sec-head .mono { text-align: left; }
+      .sheet { grid-template-columns: 1fr; }
+      .sheet > * { padding: 20px 0; }
+      .idx { padding-bottom: 0; }
+      .meta, .body { grid-column: 1; border: none; }
+      .meta { border-bottom: 1px solid var(--hair); }
+      .row { grid-template-columns: 1fr; gap: 4px; }
+      .stack { grid-template-columns: 1fr; }
+      .cell, .cell:nth-child(2n) { padding-left: 0; border-left: none; }
+      .xh { display: none; }
+    }
+    @media (max-width: 380px) {
+      .sec-head h2 { font-size: clamp(32px, 10vw, 38px); }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#work">Skip to projects</a>
+
+  <header class="bar">
+    <div class="wrap">
+      <a class="logo" href="#top"><i aria-hidden="true"></i>DJ/</a>
+      <nav class="mono" aria-label="Sections">
+        <a href="#work"><b>01</b> Work</a>
+        <a href="#experience"><b>02</b> Experience</a>
+        <a href="#stack"><b>03</b> Stack</a>
+        <a href="#contact"><b>04</b> Contact</a>
+      </nav>
+      <span class="status mono"><span class="dot" aria-hidden="true"></span>Open to work</span>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-label="Introduction">
+      <div class="xh" aria-hidden="true"><div class="h"></div><div class="v"></div><div class="read"></div></div>
+      <div class="wrap">
+        <div class="sheet-head mono rise d1">
+          <div>Doc <span>DJ-2026</span></div>
+          <div>Loc <span>Calgary, AB</span></div>
+          <div>Grad <span>Dec 2026</span></div>
+          <div>Rev <span>C · Shipping</span></div>
+        </div>
+
+        <div class="hero-body">
+          <div class="kicker mono rise d1">Graduate Junior Software Engineer · Full-Stack</div>
+          <h1 class="name rise d2">Diba<span class="l2">Jamali</span></h1>
+
+          <div class="role-line rise d3">
+            <h2>I build web apps that <em>real businesses</em> run on, from the client brief to production.</h2>
+            <p>
+              I'm finishing a BSc in Software Engineering at the University of Calgary. I've already shipped production software
+              for paying clients: one as the sole developer, one as team lead of six. I work with React, TypeScript, Node.js,
+              SQL and the cloud.
+            </p>
+          </div>
+
+          <div class="cta rise d4">
+            <a class="btn go" href="#work">View projects ↓</a>
+            <a class="btn" href="mailto:diba.jamali@gmail.com">Email me ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NUMBERS ================= -->
+    <div class="numbers" aria-label="Highlights">
+      <div class="wrap">
+        <div class="num"><strong>2</strong><span class="mono">Client apps shipped to production</span></div>
+        <div class="num"><strong>6</strong><span class="mono">Engineers led across 3 Agile sprints</span></div>
+        <div class="num"><strong>5<sup>+yrs</sup></strong><span class="mono">of records migrated, 100% accurate</span></div>
+        <div class="num"><strong>42K</strong><span class="mono">AWS Lambda calls load-tested</span></div>
+      </div>
+    </div>
+
+    <!-- ================= WORK ================= -->
+    <section id="work">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Selected<br />Work</h2>
+          <div class="mono">04 entries<br />2025 → 2026</div>
+        </div>
+
+        <!-- 01 VLD Nail -->
+        <article class="sheet">
+          <div class="idx" aria-hidden="true">01</div>
+          <div class="meta">
+            <dl>
+              <div><dt class="mono">Status</dt><dd><span class="tag live">● Live</span></dd></div>
+              <div><dt class="mono">Role</dt><dd>Sole designer &amp; full-stack developer</dd></div>
+              <div><dt class="mono">Client</dt><dd>VLD Nail Studio, Calgary</dd></div>
+              <div><dt class="mono">Stack</dt><dd>React 19 / TypeScript / Tailwind / Express 5 / Supabase (PostgreSQL) / Zod / Resend / Vercel</dd></div>
+            </dl>
+          </div>
+          <div class="body">
+            <h3>VLD Nail: booking platform &amp; studio admin</h3>
+            <p>A Calgary nail studio was booking clients by hand. I took it from client brief and Figma designs to a launched platform. Clients now book an open time slot, price their service and order custom press-on nails online.</p>
+            <ul>
+              <li><b>Studio admin dashboard:</b> secure login for several admins to confirm or decline bookings, edit services and prices, set hours, block off time and view history.</li>
+              <li>Designed the <b>PostgreSQL schema and versioned migrations</b> for the booking lifecycle (held → accepted / declined), availability and orders.</li>
+              <li>Built a secure <b>REST API</b> with token verification, rate limiting, schema validation and escaping of visitor input.</li>
+              <li>Deployed with <b>config-as-code</b> and a custom domain. I fixed free-tier cold starts by waking the API on the first page view.</li>
+            </ul>
+            <div class="links">
+              <a class="go" href="https://vldnail.ca" target="_blank" rel="noopener">Visit live site ↗</a>
+            </div>
+            <div class="callout"><span class="mono">Note</span><span>The admin side runs a real business, so I can't share its login. I'm happy to give a <b>live walkthrough</b>.</span></div>
+          </div>
+        </article>
+
+        <!-- 02 Al Nasera -->
+        <article class="sheet">
+          <div class="idx" aria-hidden="true">02</div>
+          <div class="meta">
+            <dl>
+              <div><dt class="mono">Status</dt><dd><span class="tag priv">◐ In production · NDA</span></dd></div>
+              <div><dt class="mono">Role</dt><dd>Team lead &amp; software developer</dd></div>
+              <div><dt class="mono">Client</dt><dd>Al Nasera Electronics</dd></div>
+              <div><dt class="mono">Stack</dt><dd>React / TypeScript / Tailwind / Node.js / Express / MySQL / JWT / bcrypt / RBAC</dd></div>
+            </dl>
+          </div>
+          <div class="body">
+            <h3>Legacy system modernization</h3>
+            <p>Replaced a 20-year-old job-management system for an electronics service business. The new system covers customers, repair job cards, quotations and reports, with separate dashboards for admins, operators and technicians.</p>
+            <ul>
+              <li><b>Led a 6-person team</b> through 3 Agile sprints: turned client requirements into sprint plans, assigned work and ran weekly stakeholder reviews.</li>
+              <li>Built React interfaces and <b>secure REST APIs with role-based access control</b>. Standard queries respond in 100–300 ms.</li>
+              <li>Migrated <b>5+ years of MySQL records with 100% accuracy</b>, plus an immutable audit log.</li>
+              <li>Built the quotations module, including tax, discounts and <b>PDF generation</b>. Ran unit, integration, E2E and UAT testing every sprint.</li>
+            </ul>
+            <div class="callout"><span class="mono">Note</span><span>The client asked for it to run <b>locally on their own network</b>, and it's under NDA, so I can't share the code or access. I'm happy to give a <b>live walkthrough</b>.</span></div>
+          </div>
+        </article>
+
+        <!-- 03 Occasio -->
+        <article class="sheet">
+          <div class="idx" aria-hidden="true">03</div>
+          <div class="meta">
+            <dl>
+              <div><dt class="mono">Status</dt><dd><span class="tag live">● Live</span></dd></div>
+              <div><dt class="mono">Role</dt><dd>Frontend developer, then owned the redeploy</dd></div>
+              <div><dt class="mono">Type</dt><dd>Team project</dd></div>
+              <div><dt class="mono">Stack</dt><dd>React / Firebase Auth / Node.js / Express / MySQL / Groq LLM API / Vercel</dd></div>
+            </dl>
+          </div>
+          <div class="body">
+            <h3>Occasio: AI event planner</h3>
+            <p>Plan an event through a guided chat and get three AI suggestions whenever you're unsure of an answer. It saves your plans, manages your guest list and emails invitations.</p>
+            <ul>
+              <li>Built frontend views in React and wrote <b>Jest / React Testing Library</b> tests.</li>
+              <li>Moved the app onto my own infrastructure: a new database, auth and serverless hosting, and an <b>LLM provider switch</b>.</li>
+              <li>Fixed a production bug where the chat hung forever because it couldn't parse the AI's replies.</li>
+            </ul>
+            <div class="links">
+              <a class="go" href="https://ocassio-xi.vercel.app" target="_blank" rel="noopener">Try it live ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 04 AWS Lambda -->
+        <article class="sheet">
+          <div class="idx" aria-hidden="true">04</div>
+          <div class="meta">
+            <dl>
+              <div><dt class="mono">Status</dt><dd><span class="tag acad">◇ Research</span></dd></div>
+              <div><dt class="mono">Role</dt><dd>Developer &amp; analyst</dd></div>
+              <div><dt class="mono">Type</dt><dd>Academic project</dd></div>
+              <div><dt class="mono">Stack</dt><dd>Python / AWS Lambda / Boto3 / Locust / pandas / NumPy / SciPy</dd></div>
+            </dl>
+          </div>
+          <div class="body">
+            <h3>AWS Lambda performance &amp; scalability pipeline</h3>
+            <p>An automated load-testing and statistical analysis pipeline covering 48 scenarios and about 42,000 serverless function calls.</p>
+            <ul>
+              <li>Measured <b>p95 / p99 latency</b>, throughput, cold starts and throttling.</li>
+              <li>Found that memory allocation was the main lever for performance and cost: <b>8.7–13.8× lower latency</b> at 1024 MB than at 128 MB.</li>
+              <li>Traced the throttling to traffic bursts.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Experience</h2>
+          <div class="mono">Education + work</div>
+        </div>
+        <div class="timeline">
+          <div class="row">
+            <div class="when mono">Expected Dec 2026</div>
+            <div>
+              <h3>BSc Software Engineering, University of Calgary</h3>
+              <p>Schulich School of Engineering.</p>
+            </div>
+            <div class="kw mono">Degree</div>
+          </div>
+          <div class="row">
+            <div class="when mono">Apr 2026 – Present</div>
+            <div>
+              <h3>Program Coordinator, MCG Career College</h3>
+              <p>I run academic operations for a post-secondary program and am the first point of contact for staff and student system and access issues. I find manual process gaps and work with IT, the registrar and finance to fix them.</p>
+            </div>
+            <div class="kw mono">Ops · Systems</div>
+          </div>
+          <div class="row">
+            <div class="when mono">Jul 2022 – Apr 2026</div>
+            <div>
+              <h3>Team Lead, Best Buy Canada</h3>
+              <p>I led daily operations in a high-volume technical support team, handled escalations and complex technical issues, and mentored team members.</p>
+            </div>
+            <div class="kw mono">Leadership</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STACK ================= -->
+    <section id="stack">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Tech<br />Stack</h2>
+          <div class="mono">Bold = used in production</div>
+        </div>
+        <div class="stack">
+          <div class="cell"><h3 class="mono">Languages</h3><p><b>TypeScript</b>, <b>JavaScript</b>, <b>SQL</b>, Python, Java, C#, C++</p></div>
+          <div class="cell"><h3 class="mono">Frontend</h3><p><b>React 19</b>, <b>Tailwind CSS</b>, <b>Vite</b>, responsive UI, accessibility</p></div>
+          <div class="cell"><h3 class="mono">Backend &amp; APIs</h3><p><b>Node.js</b>, <b>Express</b>, <b>REST API design</b>, <b>Zod</b> validation</p></div>
+          <div class="cell"><h3 class="mono">Databases</h3><p><b>PostgreSQL</b> (Supabase), <b>MySQL</b>, schema design, migrations</p></div>
+          <div class="cell"><h3 class="mono">Cloud &amp; DevOps</h3><p><b>Vercel</b>, <b>Render</b>, AWS Lambda, <b>Git / GitHub</b>, GitHub Actions CI/CD, Linux</p></div>
+          <div class="cell"><h3 class="mono">Security &amp; Testing</h3><p><b>Token auth</b>, <b>RBAC</b>, bcrypt, rate limiting; unit, integration, E2E and UAT testing</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <div class="mono">04 / Contact</div>
+        <a class="big-mail" href="mailto:diba.jamali@gmail.com">diba.jamali<br />@gmail.com</a>
+        <p>I'm looking for graduate and junior software engineering roles. If you'd like a walkthrough of a project, including the private ones, email me.</p>
+        <div class="cta">
+          <a class="btn go" href="mailto:diba.jamali@gmail.com">Email me ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mono">
+    <div class="wrap">
+      <span>© 2026 Diba Jamali · Calgary, AB</span>
+      <span>Built with plain HTML + CSS. No frameworks, no templates.</span>
+    </div>
+  </footer>
+
+  <script>
+    // CAD-style crosshair with coordinate readout in the hero (mouse/trackpad only)
+    (function () {
+      var hero = document.querySelector(".hero");
+      var xh = hero && hero.querySelector(".xh");
+      if (!xh || !window.matchMedia("(pointer: fine)").matches) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      var h = xh.querySelector(".h"), v = xh.querySelector(".v"), read = xh.querySelector(".read");
+      hero.addEventListener("mousemove", function (e) {
+        var r = hero.getBoundingClientRect();
+        var x = Math.round(e.clientX - r.left), y = Math.round(e.clientY - r.top);
+        h.style.top = y + "px";
+        v.style.left = x + "px";
+        read.style.left = x + 8 + "px";
+        read.style.top = y + 8 + "px";
+        read.textContent = "X " + String(x).padStart(4, "0") + "  Y " + String(y).padStart(4, "0");
+      });
+    })();
+  </script>
+</body>
+</html>
